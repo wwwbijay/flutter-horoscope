@@ -1,0 +1,51 @@
+import 'package:flutter/material.dart';
+
+class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
+
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          height: 150.0,
+          width: 190.0,
+          padding: const EdgeInsets.only(top: 40.0),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(200),
+          ),
+          child: Center(
+            child: Image.asset('assets/images/mypay-logo.png',
+                width: 200, height: 100),
+          ),
+        ),
+        const Padding(
+        padding: EdgeInsets.all(10),
+        child: TextField(
+            decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            labelText: 'User Name',
+            hintText: 'Enter valid email id as abc@gmail.com'
+          ),
+        ),
+      ),
+      const Padding(
+        padding: EdgeInsets.all(10),
+        child: TextField(
+            obscureText: true,
+            decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            labelText: 'Password',
+            hintText: 'Enter your secure password'
+          ),
+        ),
+      ),
+      ],
+    );
+  }
+}
